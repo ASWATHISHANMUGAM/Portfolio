@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aswathi's Portfolio</title>
+  <!--GoogleFont and Icons-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!----------------------------------------------------CSS--------------------------------------------------->
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #f1f1f1;
+    }
+  header {
+    position: relative;
+    height: 30vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top right, rgba(12, 0, 38, 0.6), rgba(1, 3, 72, 0.9));
+    z-index: -1;
+    opacity: 0.9;
+    filter: brightness(1.2);
+    animation: zoomHeader 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes zoomHeader {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+
+  .header-section {
+    animation: fadeSlideDown 1.5s ease-out;
+  }
+
+  .header-section h1 {
+    font-size: 3.2em;
+    margin-bottom: 0.3em;
+    color: #aad4ff;
+    text-shadow: 0 0 15px #4e96e9;
+  }
+
+  .header-section h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  #typewriter {
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  @keyframes fadeSlideDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+/* SECTION 1 : ABOUT ME */
+
+    .about-hero {
+      background: linear-gradient(145deg, rgb(8, 0, 0), rgb(7, 1, 15));
+      padding-top: 30px;
+      padding-bottom:30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 750px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      animation: fadeInUp 1s ease-in-out 0.3s;
+      animation-fill-mode: both;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      animation: fadeIn 1s ease-in-out 0.6s both;
+    }
+
+    .social-icons a {
+      color: #aad4ff;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #4e96e9;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /*SECTION :2 - EDUCATION  */
+    .education-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .edu-card-stack {
+      background: linear-gradient(145deg, #010422, #04000e);
+      border: 1px solid #f9f6f6;
+      border-radius: 16px;
+      padding: 25px 30px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 8px 20px rgba(115, 179, 253, 0.15);
+      color: #f1f1f1;
+      transition: transform 0.3s ease;
+    }
+
+    .edu-card-stack:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(78, 150, 233, 0.3);
+    }
+
+    .edu-card-stack h3 {
+      color: #aad4ff;
+      margin: 0 0 8px;
+    }
+
+    .edu-card-stack p {
+      margin: 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .edu-card-stack span {
+      display: block;
+      margin-top: 12px;
+      color: #8aa4f8;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 50px 30px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color:black;
+      border-radius: 30px;
+      box-shadow: 0 0 15px #010348;
+    }
+
+    h2 {
+      color: #8aa4f8;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+/* SECTION 3 : SKILL SHOWCASE */
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      opacity: 0;
+      animation: fadeInSkills 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .skill-card {
+      background-color: #060017;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 10px #010348;
+      flex: 1 1 250px;
+      max-width: 300px;
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: cardEnter 0.8s ease forwards;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #4e96e9, 0 0 40px #010348;
+    }
+
+    .skill-card h3 {
+      color: #8ab4f8;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .skill-card .icon {
+      font-size: 34px;
+      color: #7f899b;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover .icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    @keyframes fadeInSkills {
+      to { opacity: 1; }
+    }
+
+    @keyframes cardEnter {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #010348;
+      color: white;
+    }
+
+    a {
+      color: #aad4ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+/* BACKGROUND FLOATING PARTICLE */
+
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* SECTION 4 : CONTACT DETAILS */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0e0e0e;
+  color: #f1f1f1;
+  box-shadow: 0 0 10px #010348;
+}
+
+.contact-form button {
+  background-color: #010348;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #4e96e9;
+}
+
+.contact-form button:hover {
+  background-color: #4e96e9;
+}
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aad4ff;
+    font-weight: 500;
+  }
+
+  .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #010348;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .form-group select:focus {
+    outline: none;
+    box-shadow: 0 0 15px #4e96e9;
+  }
+
+/*RESUME BUTTON*/
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 12px 24px;
+  background-color: #010348;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 0 10px #044084;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-btn i {
+  margin-right: 8px;
+}
+
+.resume-btn:hover {
+  background-color: #4e96e9;
+  transform: scale(1.05);
+}
+
+/*DIGITAL CLOCK*/
+
+.floating-clock {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #0e0e0e;
+  color: #aad4ff;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #010348;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.85;
+}
+.floating-clock {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #0e0e0e;
+  color: #aad4ff;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #010348;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-clock:active {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 12px #4e96e9;
+}
+
+.clock-popup {
+  position: fixed;
+  top: 55px;
+  right: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #010348;
+  font-size: 0.85rem;
+  max-width: 220px;
+  display: none;
+  z-index: 9998;
+}
+
+/*PROJECT LAYOUT,GRID */
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #0a0a0a, #0f0f2e);
+  border: 1px solid #4e96e9;
+  border-radius: 18px;
+  padding: 25px 30px;
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(78, 150, 233, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(78, 150, 233, 0.5);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #aad4ff;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Custom round cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #aad4ff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s ease, left 0.05s ease;
+}
+
+  </style>
+
+
+<style>
+.achievement-section, .cert-section {
+  padding: 50px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.achievement-section h2,
+.cert-section h2 {
+  text-align: center;
+  color: #8aa4f8;
+  margin-bottom: 40px;
+}
+
+.achievements-grid,
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.achievement-card,
+.cert-card {
+  background: linear-gradient(145deg, #0a0a0a, #0f0f2e);
+  border: 1px solid #4e96e9;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(78, 150, 233, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.achievement-card:hover,
+.cert-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(78, 150, 233, 0.5);
+}
+
+.achievement-card h3,
+.cert-card h3 {
+  color: #aad4ff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.achievement-card p,
+.cert-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.achievement-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.cert-action-btn {
+  background: #010348;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 8px #4e96e9;
+  display: inline-block;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.cert-action-btn:hover {
+  background-color: #4e96e9;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .achievement-card,
+  .cert-card {
+    width: 100%;
+  }
+}
+
+
+.achievement-card,
+.cert-card {
+  background: linear-gradient(145deg, #0a0a0a, #0f0f2e);
+  border: 1px solid #4e96e9;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  height: 330px; /* Consistent height for all cards */
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(78, 150, 233, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Achievements & Certifications Shared Card Style */
+.achievement-card,
+.cert-card {
+  background: linear-gradient(145deg, #0a0a0a, #0f0f2e);
+  border: 1px solid #4e96e9;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  height: 330px; /* Ensures same size */
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(78, 150, 233, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Hover effect */
+.achievement-card:hover,
+.cert-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(78, 150, 233, 0.5);
+}
+
+/* Section wrapper layout */
+.achievement-grid,
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Section Title */
+.achievement-section h2,
+.cert-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #aad4ff;
+  margin-bottom: 20px;
+}
+
+/* View Certificate Button */
+.cert-action-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #010348;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 0 10px #044084;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cert-action-btn:hover {
+  background-color: #4e96e9;
+  transform: scale(1.05);
+}
+
+</style>
+
+
+<!---------------------------------------------------HTML----------------------------------------------------->
+
+</head>
+
+<div class="custom-cursor"></div>
+
+<body>
+
+  <header>
+  <div class="header-section">
+    <h1>ASWATHI S</h1>
+    <h2><span id="typewriter"></span></h2>
+  </div>
+</header>
+
+<!--clock-->
+  <div id="floating-clock" class="floating-clock"></div>
+  <div id="clock-popup" class="clock-popup">
+  <p>Hello! Every second is a new chance 😊</p>
+</div>
+
+<!--SECTION 1 : ABOUT ME -->
+  <div class="about-hero">
+    <h2>Hey Guys, I'm Aswathi</h2>
+    <p>I'm a passionate developer exploring the world of Full Stack Development and Artificial Intelligence.  
+    I love bringing ideas to life through code and clean UI, and I’m always eager to learn, experiment, and grow in tech every single day.</p>
+    <a href="assets/ASWATHI -CV.pdf"download class="resume-btn">
+  <i class="fas fa-download"></i> Download Resume </a>
+
+    <div class="social-icons">
+      <a href="https://github.com/ASWATHISHANMUGAM" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/aswathi29/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:aswathioff29@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>    
+  </div>
+
+  <!--SECTION 2 : Education -->
+  <section>
+    <h2>EDUCATION</h2>
+    <div class="education-stack">
+      <div class="edu-card-stack">
+        <h3>SSLC</h3>
+        <p>Little Flower Matriculation Higher Secondary School</p>
+        <span>2018 - 2020</span>
+      </div>
+      <div class="edu-card-stack">
+        <h3>HSC</h3>
+        <p>Little Flower Matriculation Higher Secondary School</p>
+        <span>2020 - 2022</span>
+      </div>
+      <div class="edu-card-stack">
+        <h3>B.E. in Electronics & Communication</h3>
+        <p>Bannari Amman Institute of Technology</p>
+        <span>2022 - 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!--SECTION 3: Skills -->
+  <section>
+    <h2>SKILL SHOWCASE</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="icon">&#60;&#47;&#62;</div><h3>HTML</h3><p>Strong foundation in semantic HTML structure to build clean and accessible web pages.</p></div>
+      <div class="skill-card"><div class="icon">&#x1F4C3;</div><h3>CSS</h3><p>Proficient in styling beautiful and responsive websites using CSS and modern layout systems.</p></div>
+      <div class="skill-card"><div class="icon">&#9881;&#65039;</div><h3>JavaScript</h3><p>Skilled in adding interactivity and dynamic features to websites using JavaScript.</p></div>
+      <div class="skill-card"><div class="icon">&#128396;</div><h3>Figma</h3><p>Comfortable designing UI and prototypes to create clean, intuitive user experiences.</p></div>
+      <div class="skill-card"><div class="icon">&#128187;</div><h3>React</h3><p>Experienced in building modular, scalable front-end applications with React.</p></div>
+      <div class="skill-card"><div class="icon">&#129302;</div><h3>Artificial Intelligence</h3><p>Integrating AI models into apps to enhance automation and user experience.</p></div>
+    </div>
+  </section>
+
+  <!--SECTION 4: Projects Section -->
+<section>
+  <h2>PROJECT HIGHLIGHTS</h2>
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>🚘 Smart Vehicle Dashboard using Qt</h3>
+      <p>
+        Designed a real-time car dashboard using the "Qt framework" that monitors critical vehicle stats including FASTag balance. 
+        The system provides instant alerts if the minimum balance is not maintained, improving toll efficiency and user experience.
+      </p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>🌊 Underwater Object Detection using YOLOv8</h3>
+      <p>
+        Developed an AI-based underwater surveillance system using "YOLOv8", capable of detecting marine debris and pollution in real-time. 
+        This supports marine sustainability by helping protect aquatic life and monitor underwater cleanliness.
+      </p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3>💼 Personal Portfolio Website</h3>
+      <p>
+        A fully interactive portfolio built using "HTML, CSS, and JavaScript", showcasing my skills and projects. 
+        It features theme toggling, animations, a floating digital clock, and contact form email integration built to reflect my full stack and UI design strengths.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="achievement-section">
+  <h2>🏆 Achievements</h2>
+  <div class="achievement-grid">
+    <div class="achievement-card">
+      <h3>1st Prize - QT Dashboard</h3>
+      <p><strong>Event:</strong> ICICT’25, Velammal Institute of Technology</p>
+      <p><strong>Project:</strong> Vehicle Monitoring Dashboard using QT</p>
+      <a href="Assets/7376221EC118-PRO-05.04.2025.pdf" target="_blank" class="cert-action-btn">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>Paper Presentation: YOLO</h3>
+      <p><strong>Event:</strong> NCRRAC’24, SRM Institute of Science and Technology</p>
+      <p><strong>Topic:</strong> Real-Time Object Identification Using YOLO</p>
+      <a href="/Assets/214 ASWATHI.S.jpeg" target="_blank" class="cert-action-btn">View Certificate</a>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+<!-- SECTION 7: Certifications -->
+<section class="cert-section">
+  <h2>🎓 Certifications</h2>
+  <div class="certifications-grid">
+
+<div class="cert-card">
+  <center>
+    <img src="assets/OIP.jpeg" alt="Infosys Logo" style="width: 80px; height: auto; margin-bottom: 10px;" />
+  </center>
+    <h3>Software Training - Infosys</h3>
+  <p><strong>Platform:</strong> Infosys Springboard</p>
+  <a href="https://infyspringboard.onwingspan.com/assets/common/pdfjs-2.14.305-dist/web/viewer.html?file=https%3A%2F%2Finfyspringboard.onwingspan.com%2Fpublic-assets%2Finfosysheadstart%2Fcert%2Flex_auth_013204562301591552112_shared%2F1-51328622-4e1e-4487-82f3-16945564f1b7.pdf" target="_blank" class="cert-action-btn">View Certificate</a>
+</div>
+
+<div class="cert-card">
+  <center>
+  <img src="assets/nvidia.jpeg" alt="NVIDIA Logo" style="width: 60px; height: auto; margin-bottom: 10px;" />
+  </center>
+  <h3>Fundamentals of Deep Learning</h3>
+  <p><strong>Platform:</strong> NVIDIA</p>
+  <a href="https://courses.nvidia.com/certificates/0c47d8db4915419e825e66491084c926" target="_blank" class="cert-action-btn">View Certificate</a>
+</div>
+
+
+    <div class="cert-card">
+      <center>
+      <img src="assets/OIP.jpeg" alt="Infosys Logo" style="width: 80px; height: auto; margin-bottom: 10px;" />
+      </center>
+      <h3>Software Training - Infosys</h3>
+      <p><strong>Platform:</strong> Infosys Springboard</p>
+      <a href="https://infyspringboard.onwingspan.com/assets/common/pdfjs-2.14.305-dist/web/viewer.html?file=https%3A%2F%2Finfyspringboard.onwingspan.com%2Fpublic-assets%2Finfosysheadstart%2Fcert%2Flex_auth_013204562301591552112_shared%2F1-51328622-4e1e-4487-82f3-16945564f1b7.pdf" target="_blank" class="cert-action-btn">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
+<canvas id="particles-bg"></canvas>
+<!--SECTION 5 : CONTACT DETAILS -->
+<section>
+  <h2>Let's Collaborate</h2>
+  <form action="https://formspree.io/f/xblywpnb" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email ID" required />
+<div class="form-group">
+  <label for="reason">Reason for Reaching Out</label>
+  <select id="reason" name="reason" required>
+    <option value="">Select an option</option>
+    <option value="job">💼 Job Offer</option>
+    <option value="chat">😄 Fun Chat</option>
+    <option value="query">❓ General Query</option>
+    <option value="collab">🤝 Collaboration</option>
+    <option value="feedback">📝 Feedback</option>
+  </select>
+</div>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  
+<!-------------------------------------------------javascript----------------------------------------------------->
+  
+<script>
+    const roles = ["Full Stack AI Developer", "UI Designer", "Content Writer"];
+    let currentRole = 0;
+    let charIndex = 0;
+    const speed = 100;
+    const pause = 1500;
+    const typewriterElement = document.getElementById("typewriter");
+
+    function type() {
+      if (charIndex < roles[currentRole].length) {
+        typewriterElement.textContent += roles[currentRole].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, speed);
+      } else {
+        setTimeout(erase, pause);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typewriterElement.textContent = roles[currentRole].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, speed / 2);
+      } else {
+        currentRole = (currentRole + 1) % roles.length;
+        setTimeout(type, speed);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      type();
+    });
+  </script>
+
+  <script>
+
+const canvas = document.getElementById('particles-bg');
+const ctx = canvas.getContext('2d');
+let w, h;
+function resize() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+const particles = Array.from({ length: 60 }, () => ({
+  x: Math.random() * w,
+  y: Math.random() * h,
+  r: Math.random() * 2 + 1,
+  dx: Math.random() * 0.5 - 0.25,
+  dy: Math.random() * 0.5 - 0.25
+}));
+
+function animate() {
+  ctx.clearRect(0, 0, w, h);
+  particles.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(78, 150, 233, 0.5)";
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+    if (p.x < 0 || p.x > w) p.dx *= -1;
+    if (p.y < 0 || p.y > h) p.dy *= -1;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+  </script>
+
+<script>
+  function updateClock() {
+    const clock = document.getElementById("floating-clock");
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    clock.textContent = `${h}:${m} ${ampm}`;
+  }
+
+  setInterval(updateClock, 5000);
+  updateClock();
+</script>
+<script>
+  function updateClock() {
+    const clock = document.getElementById("floating-clock");
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    clock.textContent = `${h}:${m} ${ampm}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+k
+  const clock = document.getElementById("floating-clock");
+  const popup = document.getElementById("clock-popup");
+
+  clock.addEventListener("click", () => {
+    popup.style.display = popup.style.display === "none" ? "block" : "none";
+  });
+
+
+  clock.addEventListener("click", () => {
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 5000);
+  });
+</script>
+
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+  });
+</script>
+
+</body>
+</html>
